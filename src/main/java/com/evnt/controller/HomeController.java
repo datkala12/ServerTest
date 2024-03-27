@@ -22,13 +22,18 @@ import com.evnt.services.AccountService;
 @Controller
 public class HomeController {
 	
-	@GetMapping({"","/home"})
+	@RequestMapping({"/","/home"})
 	public String home(Model model, Principal principal) {
 		return "home";
 	}
 	
-//	@GetMapping({"admin","admin/home"})
-//	public String admin() {
-//		return "redirect:/assets/admin/index.html";
-//	}
+	@RequestMapping("about")
+	public String about() {
+		return "about";
+	}
+
+	@RequestMapping("contact")
+	public String contact() {
+		return "contact";
+	}
 }

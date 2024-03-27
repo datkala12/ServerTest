@@ -3,10 +3,8 @@ package com.evnt.services.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-//import com.evnt.dao.AccountDAO;
 import com.evnt.entity.Account;
 import com.evnt.repo.AccountRepo;
 import com.evnt.services.AccountService;
@@ -39,6 +37,11 @@ public class AccountServiceImpl implements AccountService {
 
 	@Override
 	public Account update(Account account) {
+		return accrepo.save(account);
+	}
+	
+	@Override
+	public Account delete(Account account) {
 		return accrepo.save(account);
 	}
 	

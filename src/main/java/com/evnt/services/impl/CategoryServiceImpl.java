@@ -13,10 +13,33 @@ import com.evnt.services.CategoryService;
 
 @Service
 public class CategoryServiceImpl implements CategoryService{
-	@Autowired private CategoryRepo cateRepo;
+	
+	@Autowired 
+	private CategoryRepo cateRepo;
 
 	@Override
 	public List<Category> findAll() {
 		return cateRepo.findAll();
 	}
+
+	@Override
+	public Category findById(Integer id) {
+		return cateRepo.findById(id).get();
+	}
+
+	public Category create(Category category) {
+		return cateRepo.save(category);
+	}
+
+	@Override
+	public Category update(Category category) {
+		return cateRepo.save(category);
+	}
+
+	@Override
+	public void delete(Integer id) {
+		cateRepo.deleteById(id);
+	}
+	
+	
 }

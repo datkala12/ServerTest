@@ -12,7 +12,7 @@ import com.evnt.entity.Account;
 
 @EnableJpaRepositories
 @Repository
-public interface AccountRepo extends JpaRepository<Account, Integer> {
+public interface AccountRepo extends JpaRepository<Account, String> {
 	@Query("SELECT DISTINCT ar.accounts FROM authority ar WHERE ar.roles.role_id IN('Admin','User','Manager')")
 	List<Account> getAdministrators();
 	

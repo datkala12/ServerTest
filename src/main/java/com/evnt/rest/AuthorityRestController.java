@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.evnt.entity.Authority;
 import com.evnt.services.AuthorityService;
 
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("rest")
+@RequestMapping("/api/authority")
 public class AuthorityRestController {
 
 	@Autowired

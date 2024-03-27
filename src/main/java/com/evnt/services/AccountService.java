@@ -14,6 +14,8 @@ public interface AccountService {
 	Account create(Account account);
 
 	Account update(Account account);
+	
+	Account delete(Account account);
 
 	Long getTotalAccount();
 }

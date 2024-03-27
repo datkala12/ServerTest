@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.evnt.entity.Role;
 import com.evnt.services.RoleService;
 
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("rest/roles")
+@RequestMapping("/api/role")
 public class RoleRestController {
 
 	@Autowired
