@@ -18,4 +18,10 @@ public interface AccountService {
 	Account delete(Account account);
 
 	Long getTotalAccount();
+	
+	Account login(String username, String password);
+	
+    Account register(Account account);
+    
+    void logout(String username);
 }

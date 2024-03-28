@@ -49,4 +49,20 @@ public class AccountServiceImpl implements AccountService {
 	public Long getTotalAccount() {
 		return accrepo.count();
 	}
+	
+	@Override
+    public Account login(String username, String password) {
+        return accrepo.findByUsernameAndPassword(username, password);
+    }
+
+    @Override
+    public Account register(Account account) {
+        // You may want to implement validation logic before saving the account
+        return accrepo.save(account);
+    }
+
+    @Override
+    public void logout(String username) {
+        // Implementation for logout logic if needed
+    }
 }
